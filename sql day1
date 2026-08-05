@@ -1,0 +1,118 @@
+Basic SQL Revision Questions
+Q1
+
+Display all columns from the employees table.
+Select * From employees;
+
+
+Q2
+
+Display only the name and salary columns.
+Select name , salary from employees;
+
+
+Q3
+
+Find employees whose salary is greater than 55,000.
+Select * from employees
+where salary> 55000;
+
+
+Q4
+
+Display employees sorted by salary in descending order.
+Select * from employees
+order by salary DESC; 
+
+
+Q5
+
+Display the top 3 highest-paid employees.
+Select TOP 3 * from employees
+Order by salary DESC;
+
+
+
+Q6
+
+Display all unique departments.
+Select department from employees
+where department = distinct;
+
+Q7
+
+Display employee names with the alias Employee_Name.
+select name AS Employee_Name from employees;
+
+Q8
+
+Display employees who live in Delhi, ordered by age (ascending).
+SELECT * from employees
+where city = Delhi
+order by age ASC;
+
+
+Q9
+
+Display the first 5 employees after sorting them by name alphabetically.
+SELECT * 
+FROM employees
+ORDER BY name ASC
+LIMIT 5;
+
+
+Q10
+
+Display the name and department of employees whose salary is less than 50,000.
+
+SELECT name , department  FROM Employees
+where salary <50000;
+
+
+
+
+Bonus (Slightly Harder)
+Q11
+
+Display only the city column without duplicates.
+
+Select DISTINCT city
+FROM employees;
+
+
+
+Q12
+
+Display the employee with the lowest salary.
+
+SELECT * FROM employees
+ORDER BY salary ASC
+limit 1;
+
+
+
+Q13
+
+Display employees whose age is greater than 28, sorted by salary from highest to lowest.
+
+SELECT * FROM employees
+where age>28 
+ORDER BY salary DESC;
+
+
+Q14
+
+Display only the department and city combinations without duplicates.
+
+SELECT DISTINCT department , city 
+FROM employees;
+
+
+
+Q15
+
+Display the top 2 youngest employees
+
+SELECT * from employees
+ORDER BY age ASC
+limit 2;
