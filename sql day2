@@ -65,3 +65,58 @@ FROM employees e
 JOIN department d 
 ON e.department_id = d.department_id
 WHERE d.department_name = 'HR';
+
+
+                                                   🟡 Level 2 — JOIN + filtering
+Q6
+
+Find employees who work in IT or Finance.
+
+SELECT *
+FROM employees e 
+JOIN department d 
+ON e.department_id = d.department_id
+WHERE d.department_name = "IT" 
+OR d.deparment_name = "Finance"; 
+
+Q7
+
+Find employees whose salary is between 50,000 and 65,000, along with their department name.
+
+SELECT *
+FROM employees e 
+JOIN department d 
+ON e.department_id = d.department_id
+WHERE e.salary BETWEEN 50000 AND 65000;
+
+Q8
+
+Display employees whose name starts with 'A', along with their department name.
+
+SELECT *
+FROM employees e 
+JOIN department d 
+ON e.department_id = d.department_id
+WHERE e.name LIKE A%;
+
+Q9
+
+Display employees not working in HR, along with their department name.
+
+SELECT *
+FROM employees e 
+JOIN department d 
+ON e.department_id = d.department_id
+where d.department != "HR";
+
+
+Q10
+
+Display the highest-paid employee along with their department name.
+
+SELECT *
+FROM employees e 
+JOIN department d 
+ON e.department_id = d.department_id
+ORDER BY salary DESC
+LIMIT 1;
